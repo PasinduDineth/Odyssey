@@ -1,0 +1,1 @@
+Odyssey represents a comprehensive testing framework for web and API automation, seamlessly integrated with codeceptJs. This project draws inspiration from the no-code philosophy, offering a user-friendly, non-technical approach to end-to-end testing through the use of natural language processing.
