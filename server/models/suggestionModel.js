@@ -10,7 +10,6 @@ const getScenarios = (action) => {
             } else {
                 resolve(results);
             }
-            dbConnection.end();
         });
     });
 };

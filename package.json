@@ -11,10 +11,12 @@
         "@codeceptjs/examples": "^1.2.1",
         "@codeceptjs/ui": "^0.7.0",
         "codeceptjs": "^3.5.8",
+        "concurrently": "^8.2.2",
         "playwright": "^1.40.1"
     },
     "scripts": {
-        "start": "nodemon ./server/server.js",
+        "start": "concurrently \"nodemon ./server/server.js\" \"python3 ./server/utils/nlp/nlp.py\"",
+        "install": "npm install && pip install -r requirements.txt",
         "test": "mocha",
         "codeceptjs": "codeceptjs run --steps",
         "codeceptjs:headless": "HEADLESS=true codeceptjs run --steps",
@@ -46,6 +48,7 @@
     },
     "homepage": "https://github.com/PasinduDineth/Odyssey#readme",
     "dependencies": {
+        "axios": "^1.6.2",
         "express": "^4.18.2",
         "mysql2": "^3.6.5"
     }
