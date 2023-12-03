@@ -50,6 +50,7 @@ exports.createTest = (req, res) => {
 
 /** curl -X POST   -H "Content-Type: application/json"   -d '{"testSuite": "login_test.js"}'   http://localhost:3000/run-test */
 // @TODO curl is passing a file name. But route is running all tests.
+
 exports.runTests = async(req, res) => {
   const testRoot = getTestRoot();
   try {
