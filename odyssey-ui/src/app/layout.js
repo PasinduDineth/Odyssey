@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
         <Navbar toggleSidebar={toggleSidebar} isOpen={isOpen}/>
         <div className='flex flex-1 overflow-hidden'>
           <div className={`flex-shrink-0 ${isOpen ? 'w-64' : 'w-0'} transition-width duration-300 ease-in-out overflow-hidden`}>
-            <Sidebar isOpen={isOpen}/>
+            <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar}/>
           </div>
           <div className='flex flex-1 overflow-x-hidden overflow-y-auto'>
             {children}
@@ -26,3 +26,5 @@ export default function RootLayout({ children }) {
     </html>
   )
 }
+
+
