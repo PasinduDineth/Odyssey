@@ -9,7 +9,7 @@ import { BsJustify } from "react-icons/bs";
 const Navbar = ({toggleSidebar, isOpen}) => {
   return (
     <nav className="bg-white px-4 py-1">
-      <div className="container mx-auto flex items-center justify-between">
+      <div className="mx-2 flex items-center justify-between">
         <div className='flex justify-center items-center'>
           {!isOpen ? <FaBars size={20} className="text-text-dark cursor-pointer mr-4" onClick={toggleSidebar} /> :
           <FaArrowLeft size={20} className="text-text-dark cursor-pointer mr-4" onClick={toggleSidebar} />}

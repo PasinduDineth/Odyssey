@@ -12,14 +12,14 @@ export default function RootLayout({ children }) {
   };
   return (
     <html lang="en">
-      <body className="flex flex-1 flex-col h-[100vh]">
+      <body className={`flex flex-col min-h-screen overflow-hidden`}>
         <Navbar toggleSidebar={toggleSidebar} isOpen={isOpen}/>
-        <div className='flex h-[100%]'>
-          <div className='flex'>
+        <div className='flex flex-1 overflow-hidden'>
+          <div className={`flex-shrink-0 ${isOpen ? 'w-64' : 'w-0'} transition-width duration-300 ease-in-out overflow-hidden`}>
             <Sidebar isOpen={isOpen}/>
           </div>
-          <div className='flex'>
-          {children}
+          <div className='flex flex-1 overflow-x-hidden overflow-y-auto'>
+            {children}
           </div>
         </div>
       </body>
