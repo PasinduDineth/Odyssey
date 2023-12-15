@@ -18,11 +18,11 @@ const Navigation = () => {
               <Avatar img="./user.png" size="md" rounded bordered status='online' />
             }
           >
-            <Dropdown.Item>Dashboard</Dropdown.Item>
-            <Dropdown.Item>Settings</Dropdown.Item>
-            <Dropdown.Item>Earnings</Dropdown.Item>
+            <Dropdown.Item className="text-text">Dashboard</Dropdown.Item>
+            <Dropdown.Item className="text-text">Settings</Dropdown.Item>
+            <Dropdown.Item className="text-text">Earnings</Dropdown.Item>
             <Dropdown.Divider />
-            <Dropdown.Item>Sign out</Dropdown.Item>
+            <Dropdown.Item className="text-text">Sign out</Dropdown.Item>
           </Dropdown>
           <Navbar.Toggle />
         </div>
