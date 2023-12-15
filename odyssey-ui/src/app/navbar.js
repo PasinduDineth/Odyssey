@@ -1,32 +1,36 @@
-// ./src/app/navbar.js
-import Link from 'next/link';
-import Image from 'next/image'
-import { FaBars } from 'react-icons/fa';
-import { FaArrowLeft } from 'react-icons/fa';
-const Navbar = () => {
+import { Avatar, Dropdown, Navbar } from 'flowbite-react';
+import { IoSettingsOutline } from "react-icons/io5";
+import { VscBell } from "react-icons/vsc";
+const Navigation = () => {
   return (
-    <nav className="bg-white px-4 py-1">
-      <div className="mx-2 flex items-center justify-between">
-        <div className='flex justify-center items-center'>
-          <Image src="/logo4.png" alt="ODYSSEY" width={130} height={100} />
-        </div>
-        <div className="hidden md:flex items-center space-x-4">
-          {/* Your navigation links */}
-          <Link href="/">
-            <span className="text-text-dark font-bold">Home</span>
-          </Link>
-          <Link href="/about">
-            <span className="text-text-dark font-bold">About</span>
-          </Link>
-          <Link href="/contact">
-            <span className="text-text-dark font-bold">Contact</span>
-          </Link>
+    <Navbar fluid>
+      <div className='px-10 flex w-full justify-between'>
+        <Navbar.Brand>
+          <img src="/logo4.png" className="mr-3 h-6 sm:h-9" alt="Flowbite React Logo" />
+        </Navbar.Brand>
+        <div className="flex md:order-2 items-center">
+          <IoSettingsOutline  size={19} className="text-text cursor-pointer mr-6" />
+          <VscBell size={19} className="text-text cursor-pointer mr-6" />
+          <Dropdown
+            arrowIcon={false}
+            inline
+            label={
+              <Avatar img="./user.png" size="md" rounded bordered status='online' />
+            }
+          >
+            <Dropdown.Item>Dashboard</Dropdown.Item>
+            <Dropdown.Item>Settings</Dropdown.Item>
+            <Dropdown.Item>Earnings</Dropdown.Item>
+            <Dropdown.Divider />
+            <Dropdown.Item>Sign out</Dropdown.Item>
+          </Dropdown>
+          <Navbar.Toggle />
         </div>
       </div>
-    </nav>
+    </Navbar>
   );
 };
 
-export default Navbar;
+export default Navigation;
 
 
