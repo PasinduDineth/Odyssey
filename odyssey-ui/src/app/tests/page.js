@@ -9,6 +9,10 @@ export default function Tests() {
     const addTestItem = () => {
       setTests(tests + 1);
     };
+
+    const onSearch = () => {
+      // get data from BE
+    }
     return (
       <div className="flex w-full flex-col mx-5">
         <div className="flex justify-start w-full mt-5 p-5 space-x-20 bg-white">
@@ -35,7 +39,7 @@ export default function Tests() {
         <div className="flex w-full mt-2 min-h-screen bg-white flex-col">
           <div className='flex flex-col w-[65%]'>
             {[...Array(tests)].map((_, i, arr) => 
-              <TestCaseItem key={i + 1} count={i + 1} addTestItem={addTestItem} addEnabled={i === arr.length - 1}/>
+              <TestCaseItem key={i + 1} count={i + 1} onSearch={onSearch} addTestItem={addTestItem} addEnabled={i === arr.length - 1}/>
             )}
           </div>
           <div className="flex w-[35%] border-l-4">

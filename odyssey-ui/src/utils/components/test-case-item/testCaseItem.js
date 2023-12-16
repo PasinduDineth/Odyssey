@@ -2,7 +2,7 @@ import SearchableSelect from "../select/select"
 import { IoCheckmarkDone } from "react-icons/io5";
 import { FiPlusCircle } from "react-icons/fi";
 import { VscBlank } from "react-icons/vsc";
-const TestCaseItem = ({addTestItem, key, addEnabled, count}) => {
+const TestCaseItem = ({addTestItem, key, addEnabled, count, onSearch}) => {
     const options = [
         { value: 'option1', label: 'Option 1' },
         { value: 'option2', label: 'Option 2' },
@@ -15,7 +15,7 @@ const TestCaseItem = ({addTestItem, key, addEnabled, count}) => {
                 <VscBlank size={22} className='mr-2'/>
             }
             <p className='text-clean bg-accent px-1 mr-2 rounded'>{count}</p>
-            <SearchableSelect options={options} placeholder="Start Typing" />
+            <SearchableSelect onSearch={onSearch} options={options} placeholder="Start Typing" />
             {addEnabled ?
                 <FiPlusCircle  size={24} className='ml-2 text-primary-light' onClick={addTestItem}/>
                 :

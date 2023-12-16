@@ -1,7 +1,7 @@
 "use client"
 import React, { useState, useEffect, useRef } from 'react';
 
-const SearchableSelect = ({ options, placeholder }) => {
+const SearchableSelect = ({ options, placeholder, onSearch }) => {
   const [inputValue, setInputValue] = useState('');
   const [filteredOptions, setFilteredOptions] = useState(options);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -44,6 +44,7 @@ const SearchableSelect = ({ options, placeholder }) => {
   };
 
   const handleInputClick = () => {
+    onSearch()
     setIsDropdownOpen(true);
   };
 
