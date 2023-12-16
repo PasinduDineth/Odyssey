@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
   };
   return (
     <html lang="en">
-      <body className={`flex flex-col min-h-screen overflow-hidden`}>
+      <body className={`flex flex-col overflow-hidden`}>
         <Navigation toggleSidebar={toggleSidebar} isOpen={isOpen}/>
         <div className='flex flex-1 overflow-hidden'>
           <div className={`flex-shrink-0 ${isOpen ? 'w-64' : 'w-14'} transition-width duration-300 ease-in-out overflow-hidden`}>

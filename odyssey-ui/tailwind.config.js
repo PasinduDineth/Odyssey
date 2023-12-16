@@ -10,13 +10,15 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#F2502E'
+          DEFAULT: '#F2502E',
+          light: '#fc6444',
         },
         secondary: {
           DEFAULT: '#F29F05'
         },
         accent: {
-          DEFAULT: '#F2B705'
+          DEFAULT: '#c2c2c2',
+          light: '#ededed'
         },
         text: {
           DEFAULT:'#595458',
@@ -25,13 +27,13 @@ module.exports = {
         border: '#155E85',
         background: '#f5f8f9',
         clean: '#fff'
-      },
+        },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
-    },
+    }
   },
   plugins: [require('flowbite/plugin')],
 }

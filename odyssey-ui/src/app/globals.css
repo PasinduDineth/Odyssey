@@ -6,8 +6,15 @@
 
 * {
     font-family: 'Nunito Sans', sans-serif;
+    -webkit-font-smoothing: antialiased !important; /* For webkit browsers like Chrome and Safari */
+    -moz-osx-font-smoothing: grayscale !important; /* For Firefox on macOS */
+    font-weight: 600;
 }
 
 body {
-    background-color: #f5f8f9 !important;
+    background-color: #F3F3F5 !important;
+    -webkit-font-smoothing: antialiased !important; /* For webkit browsers like Chrome and Safari */
+    -moz-osx-font-smoothing: grayscale !important; /* For Firefox on macOS */
+    font-weight: normal;
+    font-style: normal;
 }
