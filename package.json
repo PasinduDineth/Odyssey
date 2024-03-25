@@ -15,7 +15,7 @@
         "playwright": "^1.40.1"
     },
     "scripts": {
-        "start": "concurrently \"nodemon ./server/server.js\" \"python3 ./server/utils/nlp/nlp.py\"",
+        "start": "concurrently \"nodemon ./server/server.js\" \"python ./server/utils/nlp/nlp.py\"",
         "install": "npm install && pip install -r requirements.txt",
         "test": "mocha",
         "codeceptjs": "codeceptjs run --steps",
