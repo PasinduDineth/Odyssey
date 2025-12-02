@@ -16,7 +16,7 @@
     },
     "scripts": {
         "start": "concurrently \"nodemon ./server/server.js\" \"python ./server/utils/nlp/nlp.py\"",
-        "install": "npm install && pip install -r requirements.txt",
+        "install:pip": "pip install -r ./server/utils/nlp/requirements.txt",
         "test": "mocha",
         "codeceptjs": "codeceptjs run --steps",
         "codeceptjs:headless": "HEADLESS=true codeceptjs run --steps",
