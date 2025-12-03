@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const logger = require('./middlewares/logger');
 const indexRoute = require('./routes/index');
 const bodyParser = require('body-parser');
@@ -6,6 +7,13 @@ const nlpService = require('./utils/nlpService');
 
 const app = express();
 const port = 3000;
+
+// CORS Configuration
+app.use(cors({
+  origin: 'http://localhost:3001',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
+}));
 
 app.use(bodyParser.json());
 
