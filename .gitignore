@@ -321,3 +321,7 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# NLP generated files
+server/data/embeddings.json
+server/data/index/
